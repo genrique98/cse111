@@ -1,5 +1,5 @@
 CREATE TABLE Pokemon (
-    pokename VARCHAR(25) PRIMARY KEY,
+    pokeName VARCHAR(25) PRIMARY KEY,
     isCaptured INTEGER,
     weight INTEGER,
     height INTEGER,
@@ -11,6 +11,22 @@ CREATE TABLE Pokemon (
     locationIndex INTEGER
 );
 
+CREATE table Evolution (
+    evoName VARCHAR(25) PRIMARY KEY,
+    pokeName VARCHAR(25),
+    description VARCHAR(25)
+)
+
+CREATE table Stats (
+    pokeName VARCHAR(25) PRIMARY KEY,
+    attack INTEGER,
+    defense INTEGER,
+    hp INTEGER,
+    specialAttack INTEGER,
+    specialDefense INTEGER,
+    speed INTEGER
+)
+
 CREATE TABLE Trainer (
     ownerIndex INTEGER PRIMARY KEY,
     trainerName VARCHAR(25),
@@ -18,4 +34,9 @@ CREATE TABLE Trainer (
     address CHAR(25),
 );
 
+CREATE TABLE Evolution (
+    evolution_name VARCHAR(25),
+    name CHAR(25),
+    description CHAR(25)
+);
 
